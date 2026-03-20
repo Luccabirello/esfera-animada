@@ -1,0 +1,23 @@
+.esfera {
+  /* 1. Forma Básica: Quadrado perfeito com bordas 50% */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  /* 2. Efeito 3D: O segredo está no gradiente radial */
+  /* Criamos um ponto de luz no topo esquerdo (30% 30%) */
+  background: radial-gradient(circle at 30% 30%, #777, #000);
+
+  /* 3. Profundidade: Sombra projetada no "chão" */
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+
+  /* 4. Interatividade: Suaviza a transição de cores e tamanho */
+  transition: background 0.4s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  cursor: pointer;
+}
+
+/* 5. Efeito Visual ao passar o mouse */
+.esfera:hover {
+  transform: scale(1.1); /* Aumenta levemente a esfera */
+}
